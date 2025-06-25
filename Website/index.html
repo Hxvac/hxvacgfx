@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hxvac GFX Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #ffffff;
+      --accent: #e11d48;
+      --card: #1f1f1f;
+      --discord: #5865F2;
+      --roblox: #cc1c1c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {text-align:center;padding:3rem 1rem 2rem;}
+    header h1{font-size:2.5rem;font-weight:800;margin-bottom:0.5rem;}
+    header p{font-size:1rem;}
+
+    .profile-pic{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:1rem auto 0;display:block;}
+
+    nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:1rem;}
+    nav a{font-weight:600;text-decoration:none;color:var(--text);transition:color 0.2s;}
+    nav a:hover{color:var(--accent);}    
+
+    .container{max-width:1100px;margin:auto;padding:2rem 1rem;}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+
+    .card{background:var(--card);border-radius:1rem;overflow:hidden;box-shadow:0 0 0 1px #333;transition:transform 0.3s ease;}
+    .card:hover{transform:scale(1.03);}    
+    .card img{width:100%;display:block;transition:transform 0.3s ease;}
+    .card img:hover{transform:scale(1.05);}    
+
+    .pricing{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
+    .plan{background:var(--card);border-radius:1rem;padding:2rem;box-shadow:0 0 0 1px #333;transition:transform 0.3s ease;}
+    .plan:hover{transform:scale(1.03);}    
+    .plan h3{font-size:1.4rem;margin-bottom:0.5rem;}
+    .price{font-size:1.5rem;font-weight:800;color:var(--accent);margin:1rem 0;display:flex;align-items:center;gap:0.5rem;}
+    .price-icon{height:1.4em;}
+
+    .priorities .price{background:linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-fill-color:transparent;}
+
+    .plan ul{list-style:none;margin-top:1rem;}
+    .plan li{margin-bottom:0.5rem;}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.75rem;margin-top:1.5rem;padding:0.75rem 1.5rem;color:#fff;border-radius:0.5rem;text-decoration:none;font-weight:600;transition:background 0.2s,transform 0.3s ease;}
+    .btn:hover{transform:scale(1.05);}    
+    .btn img{height:1.2em;vertical-align:middle;}
+
+    .discord-btn{background:var(--discord);}    
+    .discord-btn:hover{background:#4752c4;}    
+    .roblox-btn{background:var(--roblox);}    
+    .roblox-btn:hover{background:#b21616;}    
+
+    .order-status{background:#1f1f1f;border-radius:1rem;padding:1rem;margin:2rem auto;text-align:center;font-weight:600;max-width:400px;}
+    .order-progress{background:#333;height:12px;border-radius:6px;margin-top:0.5rem;overflow:hidden;}
+    .order-progress-bar{background:var(--accent);height:100%;width:0%;transition:width 0.3s ease;}
+
+    footer{text-align:center;padding:2rem 1rem;font-size:0.9rem;color:#777;}
+
+    @media(max-width:768px){.container{padding:1rem;}.pricing{grid-template-columns:1fr;}.gallery{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hxvac GFX</h1>
+    <p>Professional Roblox renders, thumbnails & more.</p>
+    <img src="images/profile.png" alt="Profile Picture" class="profile-pic" />
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="order-status">
+    <p>Current Orders: <strong>0 / 5</strong></p>
+    <div class="order-progress"><div class="order-progress-bar" style="width:0%;"></div></div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="container">
+    <h2 style="text-align:center;font-size:2rem;font-weight:700;margin-bottom:1rem;">Portfolio</h2>
+    <div class="gallery"><div class="card"><img src="images/sample1.png" alt="Hxvac GFX Render" /></div></div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="container">
+    <h2 style="text-align:center;font-size:2rem;font-weight:700;margin-bottom:1rem;">Pricing</h2>
+    <div class="pricing">
+      <div class="plan"><h3>Icon</h3><div class="price"><img src="images/robux-icon.png" class="price-icon" /> 3k / $5</div><ul><li>1 character</li><li>Simple background</li></ul></div>
+      <div class="plan"><h3>Thumbnail</h3><div class="price"><img src="images/robux-icon.png" class="price-icon" /> 5k / $7</div><ul><li>2+ characters</li><li>Detailed background</li></ul></div>
+      <div class="plan"><h3>Bundle</h3><div class="price"><img src="images/robux-icon.png" class="price-icon" /> 7k / $10</div><ul><li>Icon + Thumbnail</li><li>Discounted deal</li></ul></div>
+    </div>
+
+    <h2 style="text-align:center;font-size:2rem;font-weight:700;margin:3rem 0 1rem;">GFX Priorities</h2>
+    <div class="pricing priorities">
+      <div class="plan"><h3>Priority</h3><div class="price"><img src="images/robux-icon.png" class="price-icon" /> 3k / $8</div><ul><li>Skip the queue</li><li>48-hour turnaround</li></ul></div>
+      <div class="plan"><h3>Super Priority</h3><div class="price"><img src="images/robux-icon.png" class="price-icon" /> 6k / $20</div><ul><li>Top of the list</li><li>24-hour turnaround</li></ul></div>
+    </div>
+
+    <p style="text-align:center;margin-top:1rem;font-style:italic;">Revisions: <strong>2 MAX</strong></p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2 style="text-align:center;font-size:2rem;font-weight:700;margin-bottom:1rem;">Contact</h2>
+    <p style="text-align:center;">Reach out on Discord: <strong>@brandonsdifferent</strong></p>
+    <a href="https://discord.gg/dh2azNrU6q" class="btn discord-btn" target="_blank" style="display:block;text-align:center;margin:auto;width:220px;"><img src="images/discord-icon.png" alt="Discord Logo" /> Order on My Discord Server</a>
+    <p style="text-align:center;margin-top:1.5rem;">Check out my Roblox profile:</p>
+    <a href="https://www.roblox.com/users/120016524/profile" class="btn roblox-btn" target="_blank" style="display:block;text-align:center;margin:1rem auto 0;width:220px;"><img src="images/roblox-icon.png" alt="Roblox Logo" /> Visit My Roblox Profile</a>
+  </section>
+
+  <footer>&copy; 2025 Hxvac GFX. All rights reserved.</footer>
+</body>
+</html>
